@@ -1,6 +1,6 @@
 # Práctica ARP con libpcap y Python
 
-Este proyecto implementa una herramienta en Python para la captura, envío y análisis de tráfico ARP sobre redes Ethernet, utilizando `libpcap` y validada en Mininet.
+Este proyecto implementa una herramienta en Python para la captura, envío y análisis de tráfico sobre redes Ethernet, utilizando `libpcap` y validada en Mininet.
 
 ## 🧪 Criterios de evaluación (todos realizados)
 - Captura y análisis de tramas Ethernet
