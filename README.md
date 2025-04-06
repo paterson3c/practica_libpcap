@@ -1,48 +1,40 @@
-Autores: Miguel Jesús Paterson González y Mijaíl Sazhin Martín
+# Práctica ARP con libpcap y Python
 
-Se ha añadido un archivo memoria.pdf que desglosa el código y contiene pruebas de ejecución para validar los criterios de evaluación
+Este proyecto implementa una herramienta en Python para la captura, envío y análisis de tráfico ARP sobre redes Ethernet, utilizando `libpcap` y validada en Mininet.
 
-CRITERIOS DE EVALUACIÓN:
+## 🧪 Criterios de evaluación (todos realizados)
+- Captura y análisis de tramas Ethernet
+- Envío y recepción de peticiones/respuestas ARP
+- Manejo de ARP gratuito
+- Gestión de caché ARP con sincronización mediante locks
+- Impresión de mensajes sobre protocolo 0x3003
+- Validación con sentencias `debug` y capturas documentadas en `memoria.pdf`
 
-Normativa de entrega cumplida en su totalidad: REALIZADO
-Fichero leeme.txt bien explicado: REALIZADO
-Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior REALIZADO
-Enviar tramas Ethernet  correctamente REALIZADO
-Imprimir mensajes sobre el protocolo 0x3003 REALIZADO
-Enviar correctamente peticiones ARP REALIZADO
-Procesar correctamente peticiones ARP recibidas REALIZADO
-Enviar correctamente respuestas ARP REALIZADO
-Procesar correctamente respuestas ARP REALIZADO
-Manejo correcto de la caché ARP REALIZADO
-Uso correcto de Locks REALIZADO
-Realiza correctamente el ARP Gratuito REALIZADO
+## 🔧 Tecnologías
+- Python 3
+- libpcap
+- Mininet
 
-Para validar los criterios de evaluación se han incluido sentencias debug en los ficheros y en la memoria se han añadido capturas con pruebas de ello
-
-
-EJECUCIÓN:
-
-Para poder ejecutar la práctica en la carpeta /src se ejecutará lo siguiente para iniciar la red:
-
+## ▶️ Ejecución
+1. Iniciar red virtual:
 ```bash
 sudo mn --nat
 ```
-
-Para generar las terminales de los nodos h1 y h2 se ejecutará lo siguiente:
-
+2. Abrir terminales para nodos:
 ```bash
 gterm h1
 gterm h2
 ```
-
-Dentro de las nuevas terminales se ejecutará la práctica de esta manera:
-
+3. Ejecutar el script:
 ```bash
-sudo python3 practica2.py <--itf (interfaz)> <--debug>
+sudo python3 practica2.py <--itf> <--debug>
 ```
 
-Para ayuda para el uso del programa dentro de la consola de practica2.py introduce lo siguiente:
+## 📌 Notas
+El archivo `memoria.pdf` explica detalladamente el funcionamiento interno del código y documenta todas las pruebas de ejecución.
 
-```bash
-> h
-```
+## 👥 Autores
+- Miguel Jesús Paterson González – [GitHub](https://github.com/paterson3c)
+- Mijaíl Sazhin Martín – [GitHub](https://github.com/MijailSM)
+
+[Repositorio en GitHub](https://github.com/paterson3c/practica_libpcap)
